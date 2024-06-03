@@ -11,6 +11,12 @@ let answer =  Math.floor(Math.random() *(maxNum - minNum + 1)) + minNum;
 let attempts = 0;
 // let guess = -1; // initialize guess to a number outside the valid range
 
+myInput.addEventListener("input", () => {
+  if (myInput.value.trim() === "") {
+    textArea.innerHTML = ""; // clear the text area when input is empty
+  }
+});
+
 myBtn.onclick = function() {
   guess = Number(myInput.value);
 
